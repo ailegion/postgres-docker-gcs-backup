@@ -1,9 +1,9 @@
 FROM google/cloud-sdk:alpine
-LABEL maintainer="Jamie <jamie@dynastic.co>"
+LABEL maintainer="AILegion <ajdin.idrizi@gmail.com>"
 
 
 # Networking?
-RUN echo "nameserver 1.1.1.1" > /etc/resolv.conf
+# RUN echo "nameserver 1.1.1.1" > /etc/resolv.conf
 
 # Install deps
 ADD setup.sh setup.sh

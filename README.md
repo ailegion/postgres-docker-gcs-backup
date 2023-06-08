@@ -1,11 +1,17 @@
-# Backup Postgres Docker containers to Google Cloud Storage
+# Docker container for backing up Postgresql databases to Google Cloud Storage
+
+Based on the work of [Nullpixel](https://github.com/nullpixel/postgres-docker-gcs-backup).
+
+
+This docker image uploads a pg_dump backup of a database to GCS. It's based almost entirely on the work of [Nullpixel](https://github.com/nullpixel/postgres-docker-gcs-backup).
+
 **Inspired by [postgres-backup-s3](https://github.com/schickling/dockerfiles/tree/master/postgres-backup-s3)**
 
 This docker image allows for scheduled backups of a postgres docker container to a Google Cloud Storage bucket.
 
 ## Usage
 
-This image is published on the [docker hub](https://hub.docker.com/r/nullriver/postgres-docker-gcs-backup).
+This image is published on the [docker hub](https://hub.docker.com/r/ailegion/postgres-docker-gcs-backup).
 
 ### Environment variables
 | Variable                | Description                                                                                                    |
@@ -35,7 +41,7 @@ Below is a sample Docker Compose service.
 
 ```yaml
 dbbackups:
-    image: "nullriver/postgres-docker-gcs-backup:latest"
+    image: "ailegion/postgres-docker-gcs-backup:latest"
     depends_on:
       - database
     networks:

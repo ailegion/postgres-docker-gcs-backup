@@ -7,7 +7,7 @@ set -e
 apk update
 
 # Install pg_dump
-apk add --no-cache postgresql-client
+apk add --no-cache postgresql15-client
 
 # Install go-chron
 apk add curl
